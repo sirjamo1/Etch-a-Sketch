@@ -1,37 +1,23 @@
 * {
   margin: 0;
-
-  /*👉 border-collapse: collapse;??👈*/
+  border-collapse: collapse;
+}
+body {
+  display: flex;
+  justify-content: center;
 }
 #gridContainer {
-  margin: 40px;
-  width: 800px;
-  height: 800px;
-
   border: 1px dotted green;
   background-color: lightgray;
-}
-#rowDiv {
-  width: 800px;
-  height: 400px;
-  border: yellow 1px dotted;
-}
-#columnDiv {
-  width: 800px;
-  height: 400px;
-  border: rgb(89, 255, 0) 1px dotted;
+  display: flex;
+  justify-content: center;
 }
 
 .rows {
-  width: 400px;
-  height: 20px;
   border: 1px red solid;
-  display: flex;
 }
-.columns {
-  width: 400px;
-  height: 20px;
-  border: 1px blue solid;
-  display: flex;
-  flex-direction: column;
+.cols {
+  border: blue 1px solid;
+  height: 30px;
+  width: 30px;
 }
