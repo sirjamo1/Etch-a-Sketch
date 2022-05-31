@@ -13,11 +13,14 @@ body {
   justify-content: center;
 }
 
-.rows {
+.cols {
   border: 1px red solid;
 }
-.cols {
+.singleBox {
   border: blue 1px solid;
   height: 30px;
   width: 30px;
 }
+/*👉.singleBox:hover {
+  background: blue;
+}👈*/
