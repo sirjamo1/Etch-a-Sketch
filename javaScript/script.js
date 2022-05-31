@@ -20,5 +20,5 @@ function gridCreator(num) {
   }
 }
 function colorRan() {
-  return (Math.random() * 256) >> 0;
+  return Math.random() * 256 + 1;
 }
