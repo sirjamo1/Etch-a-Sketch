@@ -10,17 +10,22 @@ body {
   border: 1px dotted green;
   background-color: lightgray;
   display: flex;
-  justify-content: center;
+  width: 600px;
+  height: 600px;
 }
 
 .cols {
-  border: 1px red solid;
+/*👉  border: 1px red solid;👈*/
+  align-self: stretch;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .singleBox {
-  border: blue 1px solid;
-  height: 30px;
-  width: 30px;
+/*👉  border: blue 1px solid;👈*/
+  height: 100%;
+  box-sizing: border-box;
+  /*👉border-radius: 50%;👈*/
+  
 }
-/*👉.singleBox:hover {
-  background: blue;
-}👈*/
