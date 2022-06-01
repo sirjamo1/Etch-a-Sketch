@@ -1,10 +1,15 @@
 * {
   margin: 0;
-  border-collapse: collapse;
+  
 }
+
 body {
   display: flex;
   justify-content: center;
+}
+#mainContainer {
+  display: flex;
+  flex-direction: column;
 }
 #gridContainer {
   border: 1px dotted green;
@@ -28,4 +33,12 @@ body {
   box-sizing: border-box;
   /*👉border-radius: 50%;👈*/
   
+}
+#formContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: aqua;
+  padding: 10px;
+
 }
