@@ -1,6 +1,5 @@
 * {
   margin: 0;
-  
 }
 
 body {
@@ -8,19 +7,29 @@ body {
   justify-content: center;
 }
 #mainContainer {
+  margin-top: 50px;
+  border: 100px red solid;
+  border-top: 70px red solid;
+  border-bottom: 70px red solid;
+  border-radius: 30px;
+  box-shadow: 5px -5px 10px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 5px -5px 10px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 5px -5px 10px 2px rgba(0,0,0,0.75);
   display: flex;
   flex-direction: column;
+  position: relative;
+  width: 500px;
+
 }
 #gridContainer {
-  border: 1px dotted green;
   background-color: lightgray;
   display: flex;
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
+  padding: 2px;
 }
 
 .cols {
-/*👉  border: 1px red solid;👈*/
   align-self: stretch;
   width: 100%;
   box-sizing: border-box;
@@ -28,17 +37,49 @@ body {
   flex-direction: column;
 }
 .singleBox {
-/*👉  border: blue 1px solid;👈*/
   height: 100%;
   box-sizing: border-box;
-  /*👉border-radius: 50%;👈*/
-  
 }
 #formContainer {
   display: flex;
+  align-items: center;
+  border: blue 1 px solid;
+  position: absolute;
+  top: -70px;
+}
+#userInput {
+  color: white;
+  font-family:'Cabin Sketch', cursive;
+  font-size: 25px;
+  width: 500px;
+  display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: aqua;
-  padding: 10px;
-
+}
+#span2-100 {
+  font-size: 15px;
+}
+#random {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px dotted black;
+  box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
+-webkit-box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
+  left: -580px;
+  top: 550px;
+}
+#reset {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  border: 2px dotted black;
+  box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
+-webkit-box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
+  position: relative;
+  left:-50px;
+  top: 550px;
 }

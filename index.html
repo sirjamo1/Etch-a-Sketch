@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/styles.css" />
     <script src="/javaScript/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
   </head>
   <body>
     <div id="mainContainer">
       <div id="gridContainer"></div>
-      <form id="formContainer">
-        <label for="quantity">Squares per row (between 2 and 100):</label>
+      <form id="formContainer"><div id="userInput">
+        <label for="quantity">Squares per row <span id="span2-100">(between 2 and 100)</span>:</label>
         <input type="number" id="quantity" name="quantity" min="2" max="100" />
-        <input type="button" value="Submit" onclick="getUserNum()"/>
-        <input type="button" value="Random" onclick="gridRandom()"/>
-        <input type="button" value="Reset" onclick="resetGrid()"/>
+        <input type="button" value="Submit" onclick="getUserNum()"/></div>
+        <input id="random" type="button" value="Random" onclick="gridRandom()"/>
+        <input id="reset" type="button" value="Reset" onclick="resetGrid()"/>
       </form>
     </div>
   </body>
