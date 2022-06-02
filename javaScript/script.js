@@ -16,7 +16,7 @@ function resetGrid() {
   let resetSingleBox = document.getElementsByClassName("singleBox");
   for (let i = 0; i < resetSingleBox.length; i++) {
     resetSingleBox[i].style.backgroundColor = `rgb(255, 255, 255)`;
-  } 
+  }
 }
 //spins reset button 360deg
 let resetBtn = document.getElementById("reset");
@@ -53,12 +53,41 @@ function gridCreator(num) {
     const colContainer = document.getElementsByClassName("cols");
     for (let s = 0; s < num; s++) {
       const singleBox = document.createElement("div");
-      //listens for mouseover event then changes that div to a random color with the colorRan function
-      singleBox.addEventListener("mouseover", () => {
-        singleBox.style.backgroundColor = `rgb(${colorRan()},${colorRan()},${colorRan()})`;
+      //listens for mouseover event then changes that run radioBtnChoice function to get what radio button is selected
+      let grad = 0;
+      singleBox.addEventListener("mouseover", function radioBtnChoice() {
+        let black = document.getElementById("black");
+        let gradient = document.getElementById("gradient");
+        let multiColored = document.getElementById("multiColored");
+        if (black.checked) {
+          singleBox.style.backgroundColor = `rgb(0,0,0)`;
+        } else if (gradient.checked) {
+          if (grad <= 8) {
+            grad += 1;
+          }
+          singleBox.style.backgroundColor = `rgba(0,0,0,0.${grad})`;
+        } else if (multiColored.checked) {
+          singleBox.style.backgroundColor = `rgb(${colorRan()},${colorRan()},${colorRan()})`;
+        }
       });
       colContainer[c].appendChild(singleBox).className = "singleBox";
     }
+  }
+}
+
+function radioBtnChoice() {
+  let black = document.getElementById("black");
+  let gradient = document.getElementById("gradient");
+  let multiColored = document.getElementById("multiColored");
+  if (black.checked) {
+    singleBox.style.backgroundColor = `rgb(0,0,0)`;
+  } else if (gradient.checked) {
+    if (grad <= 8) {
+      grad += 1;
+    }
+    singleBox.style.backgroundColor = `rgba(0,0,0,0.${grad})`;
+  } else if (multiColored.checked) {
+    singleBox.style.backgroundColor = `rgb(${colorRan()},${colorRan()},${colorRan()})`;
   }
 }
 //creates a random number in the rgb range

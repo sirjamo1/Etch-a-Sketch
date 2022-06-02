@@ -6,22 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/styles.css" />
     <script src="/javaScript/script.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
     <div id="mainContainer">
       <div id="gridContainer"></div>
-      <form id="formContainer"><div id="userInput">
-        <label for="quantity">Squares per row <span id="span2-100">(between 2 and 100)</span>:</label>
-        <input type="number" id="quantity" name="quantity" min="2" max="100" />
-        <input type="button" value="Submit" onclick="getUserNum()"/></div>
-        <input id="random" class="toggle" type="button" value="Random" onclick="gridRandom()"/>
-        <input id="reset" class="toggle" type="button" value="Reset" onclick="resetGrid()"/>
+      <form id="formContainer">
+        <div id="userInput">
+          <label for="quantity"
+            >Squares per row
+            <span id="span2-100">(between 2 and 100)</span>:</label
+          >
+          
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="2"
+            max="100"
+          />
+          <input type="button" value="Submit" onclick="getUserNum()" />
+        </div>
+        <div class="radio">
+            <input type="radio" id="black" name="color_choice" value="black" checked/>
+            <label for="black">Black</label><br /><br />
+            <input type="radio" id="gradient" name="color_choice" value="Gradient" />
+            <label for="gradient">Gradient</label><br /><br />
+            <input
+              type="radio"
+              id="multiColored"
+              name="color_choice"
+              value="multiColored"
+            />
+            <label for="multiColored">Multicolored</label>
+          </div>
+        <input
+          id="random"
+          class="toggle"
+          type="button"
+          value="Random"
+          onclick="gridRandom()"
+        />
+        <input
+          id="reset"
+          class="toggle"
+          type="button"
+          value="Reset"
+          onclick="resetGrid()"
+        />
       </form>
     </div>
-    <h1>hello</h1>
   </body>
 </html>

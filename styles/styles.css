@@ -12,14 +12,13 @@ body {
   border-top: 70px red solid;
   border-bottom: 70px red solid;
   border-radius: 30px;
-  box-shadow: 5px -5px 10px 2px rgba(0,0,0,0.75);
--webkit-box-shadow: 5px -5px 10px 2px rgba(0,0,0,0.75);
--moz-box-shadow: 5px -5px 10px 2px rgba(0,0,0,0.75);
+  box-shadow: 5px -5px 10px 2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px -5px 10px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px -5px 10px 2px rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   position: relative;
   width: 500px;
-
 }
 #gridContainer {
   background-color: lightgray;
@@ -45,11 +44,12 @@ body {
   align-items: center;
   border: blue 1 px solid;
   position: absolute;
-  top: -70px;
+  top: -40px;
+  height: 10px;
 }
 #userInput {
   color: white;
-  font-family:'Cabin Sketch', cursive;
+  font-family: "Cabin Sketch", cursive;
   font-size: 25px;
   width: 500px;
   display: flex;
@@ -65,10 +65,10 @@ body {
   border-radius: 50%;
   position: relative;
   border: 2px dotted black;
-  box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
--webkit-box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
--moz-box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
-  left: -580px;
+  box-shadow: 7px -4px 10px -6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px -4px 10px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px -4px 10px -6px rgba(0, 0, 0, 0.75);
+  left: -660px;
   top: 550px;
   transition: all 1s 0.25s;
 }
@@ -77,14 +77,21 @@ body {
   width: 65px;
   border-radius: 50%;
   border: 2px dotted black;
-  box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
--webkit-box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
--moz-box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
+  box-shadow: 7px -4px 10px -6px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 7px -4px 10px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px -4px 10px -6px rgba(0, 0, 0, 0.75);
   position: relative;
-  left:-50px;
+  left: -130px;
   top: 550px;
   transition: all 1s 0.25s;
 }
-h1 {
-  color: rgba(0,0,0,0.35)
+.radio {
+  width: 80px;
+  font-size: 10px;
+  position: relative;
+  top: 150px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
