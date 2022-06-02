@@ -70,6 +70,7 @@ body {
 -moz-box-shadow: 7px -4px 10px -6px rgba(0,0,0,0.75);
   left: -580px;
   top: 550px;
+  transition: all 1s 0.25s;
 }
 #reset {
   height: 65px;
@@ -82,4 +83,8 @@ body {
   position: relative;
   left:-50px;
   top: 550px;
+  transition: all 1s 0.25s;
+}
+h1 {
+  color: rgba(0,0,0,0.35)
 }

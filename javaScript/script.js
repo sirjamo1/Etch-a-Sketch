@@ -16,8 +16,16 @@ function resetGrid() {
   let resetSingleBox = document.getElementsByClassName("singleBox");
   for (let i = 0; i < resetSingleBox.length; i++) {
     resetSingleBox[i].style.backgroundColor = `rgb(255, 255, 255)`;
-  }
+  } 
 }
+//spins reset button 360deg
+let resetBtn = document.getElementById("reset");
+let rotA = 360;
+resetBtn.addEventListener("click", function () {
+  resetBtn.style = "transform: rotate(" + rotA + "deg)";
+  rotA += 360;
+});
+
 // creates a random color single boxes
 function gridRandom() {
   let resetSingleBox = document.getElementsByClassName("singleBox");
@@ -27,6 +35,14 @@ function gridRandom() {
     ].style.backgroundColor = `rgb(${colorRan()},${colorRan()},${colorRan()})`;
   }
 }
+
+//spins random button 360deg
+let randomBtn = document.getElementById("random");
+let rotB = 360;
+randomBtn.addEventListener("click", function () {
+  randomBtn.style = "transform: rotate(" + rotB + "deg)";
+  rotB += 360;
+});
 
 // creates a number(arg) of divs and appends them to the container
 // then creates a number(arg) of divs and appends them to each of the 1st arg divs
@@ -49,4 +65,5 @@ function gridCreator(num) {
 function colorRan() {
   return Math.random() * 256 + 1;
 }
+
 window.onload = gridCreator(16);
