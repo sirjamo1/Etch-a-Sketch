@@ -1,4 +1,8 @@
 const container = document.getElementById("gridContainer");
+const mainContainer = document.getElementById("mainContainer");
+window.onload = function () {
+  gridCreator(16);
+};
 // user input
 function getUserNum() {
   const userNumInput = document.getElementById("quantity").value;
@@ -14,6 +18,7 @@ function deleteGridDivs(container) {
 // resets all single boxes (the amount the user put in)to white
 function resetGrid() {
   let resetSingleBox = document.getElementsByClassName("singleBox");
+  shake();
   for (let i = 0; i < resetSingleBox.length; i++) {
     resetSingleBox[i].style.backgroundColor = `rgb(255, 255, 255)`;
   }
@@ -25,7 +30,14 @@ resetBtn.addEventListener("click", function () {
   resetBtn.style = "transform: rotate(" + rotA + "deg)";
   rotA += 360;
 });
-
+// makes maincontainer shake
+function shake() { 
+  mainContainer.style.animation = "shaker 0.5s linear 1";
+}
+// deletes shake animation from maincontainer styles with mouseover
+resetBtn.addEventListener("mouseover", function resetShake() {
+  mainContainer.style.removeProperty("animation");
+});
 // creates a random color single boxes
 function gridRandom() {
   let resetSingleBox = document.getElementsByClassName("singleBox");
@@ -95,4 +107,4 @@ function colorRan() {
   return Math.random() * 256 + 1;
 }
 
-window.onload = gridCreator(16);
+
