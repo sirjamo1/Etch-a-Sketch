@@ -2,27 +2,24 @@ const container = document.getElementById("gridContainer");
 const mainContainer = document.getElementById("mainContainer");
 const shakeSound = new Audio("sounds/shaker.wav");
 const drawingSound = new Audio("sounds/drawing.wav");
+const wheelClick = new Audio("sounds/wheel_click.wav");
 // auto loads 16*16 grid
 window.onload = function () {
   gridCreator(16);
 };
-// user input
+// deletes current div's then creates new div's (user input)
 function getUserNum() {
   const userNumInput = document.getElementById("quantity").value;
-  deleteGridDivs(container);
-  gridCreator(userNumInput);
-}
-// deletes all divs under under #gridContainer
-function deleteGridDivs(container) {
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
+  gridCreator(userNumInput);
 }
-// resets all single boxes (the amount the user put in)to white, runs shake function and play shake sound effect
+// resets all single boxes (the amount the user put in) to white, appends shake animation and plays shake sound effect
 function resetGrid() {
   shakeSound.play();
   let resetSingleBox = document.getElementsByClassName("singleBox");
-  shake();
+  mainContainer.style.animation = "shaker 1.3s linear 1";
   for (let i = 0; i < resetSingleBox.length; i++) {
     resetSingleBox[i].style.backgroundColor = `rgb(255, 255, 255)`;
   }
@@ -34,12 +31,9 @@ resetBtn.addEventListener("click", function () {
   resetBtn.style = "transform: rotate(" + rotA + "deg)";
   rotA += 360;
 });
-// makes maincontainer shake
-function shake() {
-  mainContainer.style.animation = "shaker 1.3s linear 1";
-}
 // deletes shake animation from maincontainer styles with mousedown (not perfect but good work around)
 resetBtn.addEventListener("mousedown", function resetShake() {
+  wheelClick.play();
   mainContainer.style.removeProperty("animation");
 });
 // creates a random color single boxes
@@ -56,12 +50,13 @@ function gridRandom() {
 let randomBtn = document.getElementById("random");
 let rotB = 360;
 randomBtn.addEventListener("click", function () {
+  wheelClick.play();
   randomBtn.style = "transform: rotate(" + rotB + "deg)";
   rotB += 360;
 });
 
-// creates a number(arg) of divs and appends them to the container
-// then creates a number(arg) of divs and appends them to each of the 1st arg divs
+// creates a number(arg) of div's and appends them to the container
+// then creates a number(arg) of divs and appends them to each of the 1st arg div's
 //(only if the number(arg) is between 1-101)
 function gridCreator(num) {
   if (num < 2) {
