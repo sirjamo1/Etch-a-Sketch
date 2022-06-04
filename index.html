@@ -23,7 +23,7 @@
             >Squares per row
             <span id="span2-100">(between 2 and 100)</span>:</label
           >
-          
+
           <input
             type="number"
             id="quantity"
@@ -32,33 +32,44 @@
             max="100"
             placeholder="16"
           />
-          <input type="button" id="enterBtn" value="Enter" onclick="getUserNum()" />
+          <input
+            type="button"
+            id="enterBtn"
+            value="Enter"
+            onclick="getUserNum()"
+          />
         </div>
         <div class="radio">
-            <input type="radio" id="black" name="color_choice" value="black" checked/>
-            <label for="black">Black</label><br /><br />
-            <input type="radio" id="gradient" name="color_choice" value="Gradient" />
-            <label for="gradient">Gradient</label><br /><br />
-            <input
-              type="radio"
-              id="multiColored"
-              name="color_choice"
-              value="multiColored"
-            />
-            <label for="multiColored">Multicolored</label>
-          </div>
+          <input
+            type="radio"
+            id="black"
+            name="color_choice"
+            value="black"
+            checked
+          />
+          <label for="black">Black</label><br /><br />
+          <input
+            type="radio"
+            id="gradient"
+            name="color_choice"
+            value="Gradient"
+          />
+          <label for="gradient">Gradient</label><br /><br />
+          <input
+            type="radio"
+            id="multiColored"
+            name="color_choice"
+            value="multiColored"
+          />
+          <label for="multiColored">Multicolored</label>
+        </div>
         <input
           id="random"
           type="button"
           value="Random"
           onclick="gridRandom()"
         />
-        <input
-          id="reset"
-          type="button"
-          value="Reset"
-          onclick="resetGrid()"
-        />
+        <input id="reset" type="button" value="Reset" onclick="resetGrid()" />
       </form>
     </div>
   </body>

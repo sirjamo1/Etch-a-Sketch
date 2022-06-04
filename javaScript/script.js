@@ -103,14 +103,6 @@ function gridCreator(num) {
     }
   }
 }
-// function drawingSoundReset() {
-//   if (drawingSound.duration > 0 && !drawingSound.pause) {
-//     drawingSound.pause;
-//     drawingSound.currentTime = 0;
-//   } else {
-//     drawingSound.play();
-//   }
-// }
 
 //creates a random number in the rgb range
 function colorRan() {

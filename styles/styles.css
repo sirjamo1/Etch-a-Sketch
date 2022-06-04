@@ -81,8 +81,8 @@ body {
   font-size: 15px;
 }
 #quantity {
-width: 40px;
-border-radius: 4px;
+  width: 40px;
+  border-radius: 4px;
 }
 #enterBtn {
   width: 80px;
