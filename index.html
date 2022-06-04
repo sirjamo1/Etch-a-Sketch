@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Etch-A-Sketch</title>
   </head>
   <body>
     <div id="mainContainer">
@@ -30,8 +30,9 @@
             name="quantity"
             min="2"
             max="100"
+            placeholder="16"
           />
-          <input type="button" value="Submit" onclick="getUserNum()" />
+          <input type="button" id="enterBtn" value="Enter" onclick="getUserNum()" />
         </div>
         <div class="radio">
             <input type="radio" id="black" name="color_choice" value="black" checked/>
@@ -48,14 +49,12 @@
           </div>
         <input
           id="random"
-          class="toggle"
           type="button"
           value="Random"
           onclick="gridRandom()"
         />
         <input
           id="reset"
-          class="toggle"
           type="button"
           value="Reset"
           onclick="resetGrid()"
