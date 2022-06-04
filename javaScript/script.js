@@ -10,6 +10,7 @@ window.onload = function () {
 // deletes current div's then creates new div's (user input)
 function getUserNum() {
   const userNumInput = document.getElementById("quantity").value;
+  userNumInput.innerHTML = userNumInput;
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
