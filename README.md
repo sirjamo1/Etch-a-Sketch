@@ -2,6 +2,12 @@
 
 <h3>project odin etch a sketch</h3>
 <br><br>
+<h4>Page Preview</h4>
+<br />
+
+![Alt Text](image/etchASketchScreenshot.png?raw=true "Etch a Sketch screenshot")
+<br />
+
 <p>Learnt a-lot from this project from creating div's/styles in javaScript to adding event listeners and getting elements by id/class. </p>
 <br><br>
 <h5>Key take a-ways</h5>
